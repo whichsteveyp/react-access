@@ -1,5 +1,5 @@
 {
-  "name": "reactcess",
+  "name": "react-access",
   "version": "0.0.0",
   "description": "React Context driven role-access for conditional rendering of components.",
   "main": "dist/index.js",
