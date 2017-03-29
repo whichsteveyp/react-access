@@ -1,0 +1,27 @@
+{
+  "name": "reactcess",
+  "version": "0.0.0",
+  "description": "React Context driven role-access for conditional rendering of components.",
+  "main": "dist/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sprjr/reactcess.git"
+  },
+  "keywords": [
+    "react",
+    "context",
+    "authorization",
+    "role",
+    "access",
+    "permissions"
+  ],
+  "author": "Stephen Rivas Jr",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sprjr/reactcess/issues"
+  },
+  "homepage": "https://github.com/sprjr/reactcess#readme"
+}
