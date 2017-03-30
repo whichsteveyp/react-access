@@ -6,14 +6,15 @@ React Context driven role-access for conditional rendering of components.
 
 ```
 import RequireForAccess, {ReactAccessContext} from 'react-access';
-import {MyApp, AdminMenuBar, DefaultMenuBar} from './my-app';
+import {MyApp, AdminMenuBar} from './my-app';
 
 // you can hydrate these to your app however you'd like on initial page load
 // or in your bundle, etc
 const userPermissions = ['APPUSER', 'CREATE', 'EDIT', 'ETC'];
 
-React.render(<ReactAccessContext userPermissions={userPermissions} invalidAccessComponent={DefaultMenuBar}>
-  <RequireForAccess permissions={['ADMIN']}>
+React.render(<ReactAccessContext userPermissions={userPermissions}>
+  <RequireForAccess permissions={['ADMIN']} invalidAccessComponent={<span>You don't have admin access!</span>}>
+    {/* This will not render for our userPermissions we've provided */}
     <AdminMenuBar/>
   </RequireForAccess>
   <MyApp>
