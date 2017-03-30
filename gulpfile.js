@@ -2,6 +2,14 @@
 const gulp = require('gulp');
 
 /*
+  Section: test
+  Functions found in `gulp-tasks/test.js` that primarily handle all things test related
+*/
+
+const test = require('./gulp-tasks/test');
+gulp.task('test', test.mocha);
+
+/*
   Section: dist
   Functions found in `gulp-tasks/dist.js` that primarily pertain to all things `dist/`,
   which is the primary output target for this module that consumers need.
