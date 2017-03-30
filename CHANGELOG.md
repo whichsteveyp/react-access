@@ -17,4 +17,4 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 ### Changed
 - Quick Start example was not able to be copypasta'd, and had props
 mixed up between components.
-- removed lodash from the bundle by only importing intersection
+- removed full lodash from the bundle by only importing intersection
