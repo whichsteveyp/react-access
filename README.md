@@ -13,7 +13,10 @@ import {MyApp, AdminMenuBar} from './my-app';
 const userPermissions = ['APPUSER', 'CREATE', 'EDIT', 'ETC'];
 
 React.render(<ReactAccessContext userPermissions={userPermissions}>
-  <RequireForAccess permissions={['ADMIN']} invalidAccessComponent={<span>You don't have admin access!</span>}>
+  <RequireForAccess
+    permissions={['ADMIN']}
+    invalidAccessComponent={<span>You don't have admin access!</span>}
+  >
     {/* This will not render for our userPermissions we've provided */}
     <AdminMenuBar/>
   </RequireForAccess>
@@ -22,4 +25,5 @@ React.render(<ReactAccessContext userPermissions={userPermissions}>
 ```
 
 ## this is not quite ready
-But, I'm using it anyway. And I plan to polish it up for better, more stable production use. Feedback welcome!
+But, I'm using it anyway. And I plan to polish it up for better, more stable
+production use. Feedback welcome!
