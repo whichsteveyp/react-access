@@ -4,7 +4,7 @@ React Context driven role-access for conditional rendering of components.
 ## Quick Start
 `npm i react-access` or `yarn add react-access`
 
-```
+```js
 import RequireForAccess, {ReactAccessContext} from 'react-access';
 import {MyApp, AdminMenuBar} from './my-app';
 
