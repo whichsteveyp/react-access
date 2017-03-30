@@ -15,7 +15,7 @@ const userPermissions = ['APPUSER', 'CREATE', 'EDIT', 'ETC'];
 React.render(<ReactAccessContext userPermissions={userPermissions}>
   <RequireForAccess
     permissions={['ADMIN']}
-    invalidAccessComponent={<span>You don't have admin access!</span>}
+    invalidAccessComponent={<span>You do not have admin access!</span>}
   >
     {/* This will not render for our userPermissions we've provided */}
     <AdminMenuBar/>
