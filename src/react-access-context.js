@@ -1,5 +1,5 @@
 import {Component, PropTypes} from 'react';
-import _ from 'lodash';
+import intersection from 'lodash/intersection';
 
 export default class ReactAccessContext extends Component {
   static propTypes = {
@@ -35,7 +35,7 @@ export default class ReactAccessContext extends Component {
         // requiredPermissions match any userPermissions
         // TODO: is there a smaller comparision function we can use to reduce
         // bundle size and drop a dependency?
-        return _.intersection(userCapabilities, requiredRoles).length > 1;
+        return intersection(userCapabilities, requiredRoles).length > 1;
       }
     },
     userPermissions: [],
