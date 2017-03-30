@@ -15,6 +15,7 @@
     "react",
     "context",
     "authorization",
+    "auth",
     "access",
     "permissions"
   ],
@@ -25,6 +26,9 @@
   },
   "homepage": "https://github.com/sprjr/react-access#readme",
   "files": ["dist"],
+  "peerDependencies": {
+    "react": "^15.3.2"
+  },
   "dependencies": {
     "lodash": "4.17.4"
   },
