@@ -35,7 +35,7 @@ export default class ReactAccessContext extends Component {
         // requiredPermissions match any userPermissions
         // TODO: is there a smaller comparision function we can use to reduce
         // bundle size and drop a dependency?
-        return intersection(userCapabilities, requiredRoles).length > 1;
+        return intersection(userPermissions, requiredPermissions).length > 1;
       }
     },
     userPermissions: [],
