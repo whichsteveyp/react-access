@@ -1,6 +1,6 @@
 {
   "name": "react-access",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "React Context driven role-access for conditional rendering of components.",
   "main": "dist/react-access.js",
   "scripts": {

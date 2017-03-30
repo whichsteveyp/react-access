@@ -5,6 +5,8 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased]
+
+## [0.0.3] - 2017-03-03
 ### Fixed
 - The default validator was fixed so it _actually_ works and doesn't throw.
 
