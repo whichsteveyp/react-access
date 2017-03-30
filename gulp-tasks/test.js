@@ -1,13 +1,15 @@
 const gulp = require('gulp');
 const plugins = require('gulp-load-plugins')();
 
+const globals = require('../test/setup/.globals');
+
 // these are intended for internal use only, and not exposed for gulp tasks
 // hence, the _ prefix
 function _mocha() {
-  return gulp.src(['test/setup/node.js', 'test/unit/*.js'])
+  return gulp.src(['test/setup/node.js', 'test/unit/*.js'], {read: false})
     .pipe(plugins.mocha({
       reporter: 'dot',
-      // globals: Object.keys(mochaGlobals.globals),
+      globals: Object.keys(globals),
       ignoreLeaks: false
     }));
 }
