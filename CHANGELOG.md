@@ -5,6 +5,8 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased]
+### Added
+- Test Runner & basic functionality unit tests added for RequireForAccess
 
 ## [0.0.3] - 2017-03-03
 ### Fixed
