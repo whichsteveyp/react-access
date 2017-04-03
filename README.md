@@ -1,6 +1,8 @@
 # react-access
 React Context driven role-access for conditional rendering of components.
 
+[![Travis build status](http://img.shields.io/travis/sprjr/react-access.svg?style=flat)](https://travis-ci.org/sprjr/react-access)
+
 ## Quick Start
 `npm i react-access` or `yarn add react-access`
 
