@@ -6,3 +6,4 @@ matrix:
   include:
     - env: REACT=14.x
     - env: REACT=15.x
+cache: yarn
