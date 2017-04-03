@@ -53,6 +53,7 @@
     "pleaserc": "^2.3.1",
     "react-addons-test-utils": "15.3.2",
     "react-dom": "^15.3.2",
+    "react": "^15.3.2",
     "webpack-stream": "3.2.0",
     "webpack": "1.13.2"
   }
