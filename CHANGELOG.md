@@ -5,8 +5,17 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased]
+
+## [0.0.4] - 2017-03-03
 ### Added
 - Test Runner & basic functionality unit tests added for RequireForAccess
+- TravisCI support, with react matrix to ensure module is working across
+supported versions.
+- yarn
+
+### Changed
+- `README.md` has basic API information for the two primary components
+- `peerDependencies` updated to allow broader `react` semver support
 
 ## [0.0.3] - 2017-03-03
 ### Fixed
