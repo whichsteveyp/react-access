@@ -27,7 +27,7 @@
   "homepage": "https://github.com/sprjr/react-access#readme",
   "files": ["dist"],
   "peerDependencies": {
-    "react": "^15.3.2"
+    "react": "0.14.x || 15.3.x"
   },
   "dependencies": {
     "lodash": "4.17.4"
