@@ -1,19 +1,9 @@
 import React from 'react';
 import {shallow} from 'enzyme';
-import RequireForAccess, {__get__} from '../../src';
+import RequireForAccess from '../../src';
 
 describe('RequireForAccess', function() {
-  beforeEach(() => {
-    //
-  });
-
   describe('rendering', () => {
-    beforeEach(() => {
-      // this.preventScroll = __get__('preventScroll');
-      // this.preventScroll.on = stub();
-      // this.preventScroll.off = stub();
-    });
-
     it('should render the provided children when authorizeAccess() is true', () => {
       const wrapper = shallow(<RequireForAccess>
         <div className="secret-stuff"/>
