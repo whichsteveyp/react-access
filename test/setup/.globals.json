@@ -1,4 +1,9 @@
 {
   "assert": true,
-  "document": true
+  "document": true,
+  "expect": true,
+  "mock": true,
+  "sandbox": true,
+  "spy": true,
+  "stub": true
 }
