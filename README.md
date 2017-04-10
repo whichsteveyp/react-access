@@ -36,7 +36,7 @@ but users are only given `CAN_VIEW` and `CAN_CREATE`. Your menu may render
 an option for deleting, but only for someone with the right permission set.
 
 ### Why should I not use this?
-This library utilizes the React context API. This can add a few
+This library utilizes the [React context](https://facebook.github.io/react/docs/context.html) API. This can add a few
 considerations for use in your project:
 1. React folks like to say you shouldn't use context because it can/will
 change and is experimental. If it breaks, updating your app to newer
@@ -57,7 +57,7 @@ This library is more concerned with solving how you pass `hasAccess` and
 `userPermissions` all the way down your application tree to leaf nodes.
 
 ## API
-This components used in tandem to accomplish what we're aiming for are:
+The components used in tandem to accomplish what we're aiming for are:
 1. `<ReactAccessContext>`, which is a context provider designed to be
 the single point of entry for your user data for all (or a section) of
 your application.
