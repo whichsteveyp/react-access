@@ -6,6 +6,13 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased]
 
+## [0.0.5] - 2017-04-10
+### Added
+- Tests for `<ReactAccessContext/>` rendering & default validator
+
+### Fixed
+- Default validator behavior did not work when only requiring 1 permission
+
 ## [0.0.4] - 2017-03-03
 ### Added
 - Test Runner & basic functionality unit tests added for RequireForAccess
