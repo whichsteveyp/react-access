@@ -5,6 +5,13 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased]
+### Added
+- New `peerDependencies` update! Be sure to include [prop-types](https://www.npmjs.com/package/prop-types)
+
+### Changed
+- We no longer utilize `React.PropTypes`. We _also_ don't have a strategy
+just yet on how to recommend you using this module in dev & production
+without shipping useless bits. TBD!
 
 ## [0.0.5] - 2017-04-10
 ### Added
