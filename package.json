@@ -29,7 +29,7 @@
     "dist"
   ],
   "peerDependencies": {
-    "react": "0.14.x || 15.x",
+    "react": "^0.14.9 || 15.x",
     "prop-types": "15.x"
   },
   "dependencies": {

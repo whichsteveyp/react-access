@@ -12,6 +12,9 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 - We no longer utilize `React.PropTypes`. We _also_ don't have a strategy
 just yet on how to recommend you using this module in dev & production
 without shipping useless bits. TBD!
+- Support for `react@0.14.x` has been dropped, although _our_ tests pass
+this is likely to break in other apps. We now require `react@^0.14.9`, or
+anything on the `15.x` branch
 
 ## [0.0.5] - 2017-04-10
 ### Added
