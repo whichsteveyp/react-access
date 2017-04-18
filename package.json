@@ -5,7 +5,7 @@
   "main": "dist/react-access.js",
   "scripts": {
     "test": "gulp test",
-    "prepublish": "gulp test && gulp build"
+    "prepublish": "in-publish && gulp test && gulp build || not-in-publish"
   },
   "repository": {
     "type": "git",
@@ -29,8 +29,8 @@
     "dist"
   ],
   "peerDependencies": {
-    "react": "^0.14.9 || 15.x",
-    "prop-types": "15.x"
+    "prop-types": "15.x",
+    "react": "^0.14.9 || 15.x"
   },
   "dependencies": {
     "lodash": "4.17.4"
@@ -54,7 +54,7 @@
     "gulp-rename": "1.2.2",
     "gulp-sourcemaps": "1.6.0",
     "gulp-uglify": "2.0.0",
-    "pleaserc": "^2.3.1",
+    "in-publish": "2.0.0",
     "prop-types": "15.5",
     "react": "15.5",
     "react-addons-test-utils": "15.5",
