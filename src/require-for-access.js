@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React, {Component, Children} from 'react';
 import PropTypes from 'prop-types';
 
 export default class RequireForAccess extends Component {
@@ -18,9 +18,7 @@ export default class RequireForAccess extends Component {
     const {authorizeAccess} = this.context;
     const pass = authorizeAccess(permissions, requireAll);
 
-    return <div className={`react-access-${pass ? '' : 'in'}valid`}>
-      {pass ? children : invalidAccessComponent}
-    </div>;
+    return pass ? Children.only(children) : invalidAccessComponent;
   }
 
   static defaultProps = {

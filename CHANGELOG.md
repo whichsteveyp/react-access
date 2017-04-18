@@ -15,6 +15,10 @@ without shipping useless bits. TBD!
 - Support for `react@0.14.x` has been dropped, although _our_ tests pass
 this is likely to break in other apps. We now require `react@^0.14.9`, or
 anything on the `15.x` branch
+- `<RequireForAccess/>` now only accepts a *single* child node
+- The extraneous `<div/>` soup we were adding to the DOM has been removed,
+if you had previously relied on that `div.react-access-valid` for layout
+
 
 ## [0.0.5] - 2017-04-10
 ### Added
