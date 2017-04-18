@@ -5,6 +5,8 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased]
+
+## [0.0.6] - 2017-04-18
 ### Added
 - New `peerDependencies` update! Be sure to include [prop-types](https://www.npmjs.com/package/prop-types)
 
@@ -19,6 +21,10 @@ anything on the `15.x` branch
 - The extraneous `<div/>` soup we were adding to the DOM has been removed,
 if you had previously relied on that `div.react-access-valid` for layout
 
+### Fixed
+- Corrected issues that were commit direct to master previously when trying
+to 'fix testing matrix' for other react versions. Lesson learned on no PRs.
+Again :)
 
 ## [0.0.5] - 2017-04-10
 ### Added
