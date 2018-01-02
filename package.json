@@ -30,7 +30,7 @@
   ],
   "peerDependencies": {
     "prop-types": "15.x",
-    "react": "^0.14.9 || 15.x || 16.x"
+    "react": "=> 0.14.9"
   },
   "dependencies": {
     "lodash": "4.17.4"
