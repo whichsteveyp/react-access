@@ -6,6 +6,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased]
 
+## [1.0.0-alpha1] - 2018-02-07
+- Updated TravisCI testing framework for supported React versions
+- Simplified `peerDependency` versions allowed for React
+
 ## [0.0.6] - 2017-04-18
 ### Added
 - New `peerDependencies` update! Be sure to include [prop-types](https://www.npmjs.com/package/prop-types)
