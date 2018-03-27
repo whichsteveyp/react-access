@@ -1,8 +1,8 @@
-import ReactAccessContext from './react-access-context';
-import RequireForAccess from './require-for-access';
+import { ReactAccessProvider, ReactAccessConsumer, RequireForAccess } from './react-access';
 
 export {
-  ReactAccessContext,
+  ReactAccessProvider,
+  ReactAccessConsumer,
   RequireForAccess,
 };
 
