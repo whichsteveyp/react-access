@@ -1,6 +1,6 @@
 import React from 'react';
 import {shallow} from 'enzyme';
-import {ReactAccessProvider, __get__} from '../../src';
+import {ReactAccessProvider} from '../../src';
 
 describe('ReactAccessProvider', function() {
   beforeEach(() => {
