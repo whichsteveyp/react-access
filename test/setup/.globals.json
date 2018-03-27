@@ -1,6 +1,7 @@
 {
   "assert": true,
   "document": true,
+  "window": true,
   "expect": true,
   "mock": true,
   "sandbox": true,

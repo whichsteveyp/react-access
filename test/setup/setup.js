@@ -1,4 +1,5 @@
 import { configure } from 'enzyme';
+import { JSDOM } from 'jsdom';
 
 // enzyme requires special adapters now that are in different modules
 // as opposed to different imports, so we need to configure it based on
@@ -17,6 +18,11 @@ if (process.env.REACT_VERSION === '^15.4.0') {
 module.exports = function(root) {
   root = root ? root : global;
   root.expect = root.chai.expect;
+
+  const dom = new JSDOM('<!doctype html><html><body></body></html>');
+  root.window = dom.window;
+  root.document = dom.window.document;
+
 
   beforeEach(() => {
     // Using these globally-available Sinon features is preferrable, as they're
