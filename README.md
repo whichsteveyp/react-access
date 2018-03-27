@@ -7,14 +7,14 @@ React Context driven role-access for conditional rendering of components.
 `npm i react-access` or `yarn add react-access`
 
 ```js
-import RequireForAccess, {ReactAccessContext} from 'react-access';
+import RequireForAccess, {ReactAccessProvider} from 'react-access';
 import {MyApp, AdminMenuBar} from './my-app';
 
 // you can hydrate these to your app however you'd like on initial page load
 // or in your bundle, etc
 const userPermissions = ['APPUSER', 'CREATE', 'EDIT', 'ETC'];
 
-React.render(<ReactAccessContext userPermissions={userPermissions}>
+React.render(<ReactAccessProvider permissions={userPermissions}>
   <RequireForAccess
     permissions={['ADMIN']}
     invalidAccessComponent={<span>You do not have admin access!</span>}
@@ -23,7 +23,7 @@ React.render(<ReactAccessContext userPermissions={userPermissions}>
     <AdminMenuBar/>
   </RequireForAccess>
   <MyApp>
-</ReactAccessContext>, document.getElementById('react-app'));
+</ReactAccessProvider>, document.getElementById('react-app'));
 ```
 
 ### Why could I use this?
@@ -58,17 +58,27 @@ This library is more concerned with solving how you pass `hasAccess` and
 
 ## API
 The components used in tandem to accomplish what we're aiming for are:
-1. `<ReactAccessContext>`, which is a context provider designed to be
+1. `<ReactAccessProvider>`, which is a context provider designed to be
 the single point of entry for your user data for all (or a section) of
 your application.
-2. `<RequireForAccess>`, which is a component that leverages that context
+1. `<RequireForAccess>`, which is a component that leverages that context
 and determines if the contents should render.
+1. `<ReactAccessConsumer>`, which is a context consumer that provides
+`authorizeAccess` in a render callback, like so:
+```
+<ReactAccessConsumer>
+  {authorizeAccess => {
+    // you can invoke `authorizeAccess` here and use the result of the
+    // parent call however you'd like
+  }}
+</ReactAccessConsumer>
+```
 
-### <ReactAccessContext> Props
+### <ReactAccessProvider> Props
 | Name | Required | Description |
 |------|-------------|----------|
 |children | Yes | Any valid-to-render React Children (usually your app, or a section of it) |
-|userPermissions | Yes | An array of permission strings the current user has (usually from session/server data) |
+|permissions | Yes | An array of permission strings the current user has (usually from session/server data) |
 |validator | No | You may override the default validation with your own by passing a function which will be invoked with the signature `validator(userPermissions, requiredPermissions, requireAll)` |
 
 ### <RequireForAccess> Props
@@ -78,7 +88,3 @@ and determines if the contents should render.
 |permissions | Yes | An array of permission strings this component requires in order to grant access |
 |invalidAccessComponent | No | Any valid-to-render React Children you wish to be rendered if access is *not* granted |
 | requireAll | No | A boolean value passed to `validator` that is *not* implemented in the default method |
-
-## this is not quite ready
-But, I'm using it anyway. And I plan to polish it up for better, more stable
-production use. Feedback welcome!
