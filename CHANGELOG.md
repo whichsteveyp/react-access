@@ -6,6 +6,29 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased]
 
+## [1.0.0-alpha2] - 2018-03-27
+### Changed
+- Enhanced TravisCI matrix to include support for testing ^16.x,
+and 16.3.x prerelease versions, which use the new React Context API
+- Our `README.md` has updated examples on the new API usage
+
+### Added
+- Introduced `create-react-context` polyfill, so we can use new new,
+while still being safe for old old
+- Broke many API things, namely our exports:
+  - `<ReactAccessContext/>` -> `<ReactAccessProvider/>`
+  - `<ReactAccessConsumer/>` is brand new, but you _probably_ don't
+  need it
+  - `<RequireForAccess/>` -> uh, oh, it's the same
+- `userPermissions` was simplified to `permissions`, not backwards
+compatible
+
+### Fixed
+- `requireAll` still does not work ;)
+- Fixed a `peerDependency` bug on introduced in `alpha1`
+- Updated our yarn stuff to not use my work internal registry
+by mistake.
+
 ## [1.0.0-alpha1] - 2018-02-07
 - Updated TravisCI testing framework for supported React versions
 - Simplified `peerDependency` versions allowed for React
