@@ -6,6 +6,14 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased]
 
+## [1.0.0-alpha3] - 2018-03-28
+### Added
+- A contributors section for the folks who've helped recently get this
+updated and reviewed.
+
+### Fixed
+- `requireAll` works now with the default `validator` 🎉
+
 ## [1.0.0-alpha2] - 2018-03-27
 ### Changed
 - Enhanced TravisCI matrix to include support for testing ^16.x,
