@@ -10,9 +10,9 @@ matrix:
     # testing the ^15.4.x releases
     - env: REACT_VERSION=^15.4.0 REACT_ADDONS_TEST_UTILS_VERSION=^15.4.0
     # testing the ^16.x releases
-    - env: REACT_VERSION=^16.x REACT_ADDONS_TEST_UTILS_VERSION=^16.x
+    - env: REACT_VERSION=^16.x REACT_ADDONS_TEST_UTILS_VERSION=latest
     # testing the latest 16.3.x pre-release versions
-    - env: REACT_VERSION=>=16.3.0-alpha.1 REACT_ADDONS_TEST_UTILS_VERSION=>=16.3.0-alpha.1
+    - env: REACT_VERSION=>=16.3.0-alpha.1 REACT_ADDONS_TEST_UTILS_VERSION=latest
     # testing the latest highest supported release
     - env: REACT_VERSION=latest REACT_ADDONS_TEST_UTILS_VERSION=latest
 cache: yarn
