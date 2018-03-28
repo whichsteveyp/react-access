@@ -87,4 +87,4 @@ and determines if the contents should render.
 |children | Yes | Any valid-to-render React Children you wish to be rendered if access is granted |
 |permissions | Yes | An array of permission strings this component requires in order to grant access |
 |invalidAccessComponent | No | Any valid-to-render React Children you wish to be rendered if access is *not* granted |
-| requireAll | No | A boolean value passed to `validator` that is *not* implemented in the default method |
+| requireAll | No | A boolean value passed to `validator` that indicates all permissions passed in are required to update component |
