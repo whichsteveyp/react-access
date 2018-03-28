@@ -88,3 +88,11 @@ and determines if the contents should render.
 |permissions | Yes | An array of permission strings this component requires in order to grant access |
 |invalidAccessComponent | No | Any valid-to-render React Children you wish to be rendered if access is *not* granted |
 | requireAll | No | A boolean value passed to `validator` that indicates all permissions passed in are required to update component |
+
+## Contributors
+([Emoji key](https://github.com/kentcdodds/all-contributors#emoji-key))
+
+| [<img src="https://avatars3.githubusercontent.com/u/682566?v=4" width="100px;"/><br /><sub>Stephen Rivas JR</sub>](http://twitter.com/stephenrivasjr)<br />[💻](https://github.com/sprjr/react-access/commits?author=sprjr "Code") [📖](https://github.com/sprjr/react-access/commits?author=sprjr "Documentation") [🤔](#ideas-sprjr "Ideas, Planning, & Feedback") | [<img src="https://avatars3.githubusercontent.com/u/1207250?v=4" width="100px;"/><br /><sub>Alan Souzati</sub>](http://www.alansouzati.com/)<br />[💻](https://github.com/sprjr/react-access/commits?author=alansouzati "Code") | [<img src="https://avatars3.githubusercontent.com/u/8263298?v=4" width="100px;"/><br /><sub>Connor Hastings</sub>](http://conor.rodeo/)<br />[💻](https://github.com/sprjr/react-access/commits?author=connorhastings "Code") [📖](https://github.com/sprjr/react-access/commits?author=connorhastings "Documentation") [⚠️](https://github.com/sprjr/react-access/commits?author=connorhastings "Tests") |
+
+This project (mostly) follows the [all-contributors](https://github.com/kentcdodds/all-contributors)
+specification. Contributions of any kind are welcome!
