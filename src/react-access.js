@@ -33,8 +33,10 @@ export class ReactAccessProvider extends Component {
   static defaultProps = {
     validator(permissions, requiredPermissions, requireAll) {
       if (requireAll === true) {
-        // TODO: userPermissions contains all requiredPermissions
-        // return
+        const numberOfRequiredPermissionsHad = requiredPermissions.filter(permission => (
+          permissions.indexOf(permission) !== -1
+        )).length;
+        return numberOfRequiredPermissionsHad === requiredPermissions.length;
       } else {
         // by default we will authorize access if any of the permissions in
         // requiredPermissions match any userPermissions

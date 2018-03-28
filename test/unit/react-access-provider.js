@@ -53,5 +53,24 @@ describe('ReactAccessProvider', function() {
       assert(validator(userWithAllowedPermissions, requiredPermissions))
       assert(!validator(userWithDeniedPermissions, requiredPermissions))
     });
+
+    it('should generically validate the userPermissions & requiredPermissions by default with requireAll = true', () => {
+      const wrapper = shallow(<ReactAccessProvider {...this.defaultProps}>
+        <span>App Code</span>
+      </ReactAccessProvider>);
+
+      // default props are not available on wrapper.prop() or wrapper.props()
+      // so we need an instance before we can access it
+      const validator = wrapper.instance().props.validator;
+
+      // assert that when a required permission is present, access is authorized
+      const userWithAllowedPermissions = ['edit', 'delete', 'read', 'create'];
+      const userWithDeniedPermissions = ['edit', 'read', 'delete'];
+      const requiredPermissions = ['delete', 'create'];
+      const requireAll = true;
+
+      assert(validator(userWithAllowedPermissions, requiredPermissions, requireAll));
+      assert(!validator(userWithDeniedPermissions, requiredPermissions, requireAll));
+    });
   });
 });
