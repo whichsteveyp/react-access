@@ -1,6 +1,5 @@
 import React, {Component} from 'react';
 import PropTypes from 'prop-types';
-import intersection from 'lodash/intersection';
 import createReactContext from 'create-react-context';
 
 // by default, our value is always a function that returns
@@ -32,17 +31,18 @@ export class ReactAccessProvider extends Component {
 
   static defaultProps = {
     validator(permissions, requiredPermissions, requireAll) {
+      const numberOfRequiredPermissionsHad = requiredPermissions.filter(permission => (
+        permissions.indexOf(permission) !== -1
+      )).length;
+
       if (requireAll === true) {
-        const numberOfRequiredPermissionsHad = requiredPermissions.filter(permission => (
-          permissions.indexOf(permission) !== -1
-        )).length;
         return numberOfRequiredPermissionsHad === requiredPermissions.length;
       } else {
         // by default we will authorize access if any of the permissions in
         // requiredPermissions match any userPermissions
         // TODO: is there a smaller comparision function we can use to reduce
         // bundle size and drop a dependency?
-        return intersection(permissions, requiredPermissions).length > 0;
+        return numberOfRequiredPermissionsHad > 0;
       }
     },
     permissions: [],

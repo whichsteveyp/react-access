@@ -2,20 +2,18 @@ language: node_js
 node_js:
   - "stable"
 sudo: false
-env: REACT_VERSION=16.2.0
+env: REACT_VERSION=16.3.0
 matrix:
   include:
     # testing the <15.4.0 >15.0.0 releases
-    - env: REACT_VERSION=<15.4.0 >15.0.0 REACT_ADDONS_TEST_UTILS_VERSION=<15.4.0 >15.0.0
+    - env: REACT_VERSION=<15.4.0 >15.0.0
     # testing the ^15.4.x releases
-    - env: REACT_VERSION=^15.4.0 REACT_ADDONS_TEST_UTILS_VERSION=^15.4.0
+    - env: REACT_VERSION=^15.4.0
     # testing the ^16.x releases
-    - env: REACT_VERSION=^16.x REACT_ADDONS_TEST_UTILS_VERSION=latest
-    # testing the latest 16.3.x pre-release versions
-    - env: REACT_VERSION=>=16.3.0-alpha.1 REACT_ADDONS_TEST_UTILS_VERSION=latest
-    # testing the latest highest supported release
-    - env: REACT_VERSION=latest REACT_ADDONS_TEST_UTILS_VERSION=latest
+    - env: REACT_VERSION=^16.x
+    # testing the latest release
+    - env: REACT_VERSION=latest
 cache: yarn
 install:
   - yarn
-  - yarn add react@$REACT_VERSION react-dom@$REACT_VERSION react-addons-test-utils@$REACT_ADDONS_TEST_UTILS_VERSION
+  - yarn add react@$REACT_VERSION react-dom@$REACT_VERSION

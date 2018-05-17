@@ -16,7 +16,6 @@ module.exports = {
   },
   devtool: 'source-map',
   plugins: [
-    new BundleAnalyzerPlugin(),
     new UglifyJsPlugin({
       sourceMap: true,
     }),
