@@ -6,8 +6,7 @@ const gulp = require('gulp');
   Functions found in `gulp-tasks/test.js` that primarily handle all things test related
 */
 
-const test = require('./gulp-tasks/test');
-gulp.task('test', test.mocha);
+// empty
 
 /*
   Section: dist
