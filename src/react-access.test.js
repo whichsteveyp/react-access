@@ -40,3 +40,21 @@ test('defaultProps#validator behaves as expected', () => {
   // all requiredPermissions found
   expect(validator(['user', 'super-user', 'admin'], ['user', 'super-user', 'admin'], true)).toBe(true);
 });
+
+test('authorizeAccess calls the validator with the expected arguments', () => {
+  const stub = jest.fn();
+  const requiredPermissions = ['user'];
+  const userPermissions = ['admin'];
+
+  render(<ReactAccessProvider validator={stub} permissions={userPermissions}>
+    <RequireForAccess permissions={requiredPermissions} requireAll>
+      <div data-testid="secret">Secret Content</div>
+    </RequireForAccess>
+  </ReactAccessProvider>);
+
+  expect(stub.mock.calls.length).toBe(1);
+  const call = stub.mock.calls[0];
+  expect(call[0]).toBe(userPermissions);
+  expect(call[1]).toBe(requiredPermissions);
+  expect(call[2]).toBe(true);
+});
