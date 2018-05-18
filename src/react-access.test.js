@@ -25,5 +25,18 @@ test('renders invalidAccessComponent when validator is false', () => {
   expect(queryByText('Secret Content')).toBeNull();
 });
 
+test('defaultProps#validator behaves as expected', () => {
+  const { validator } = ReactAccessProvider.defaultProps;
 
+  // no requiredPermissions found
+  expect(validator(['user', 'super-user'], ['admin'])).toBe(false);
 
+  // one requiredPermission found
+  expect(validator(['user', 'super-user'], ['user'])).toBe(true);
+
+  // all requiredPermissions not found
+  expect(validator(['user', 'super-user'], ['user', 'super-user', 'admin'], true)).toBe(false);
+
+  // all requiredPermissions found
+  expect(validator(['user', 'super-user', 'admin'], ['user', 'super-user', 'admin'], true)).toBe(true);
+});
