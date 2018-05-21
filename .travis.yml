@@ -2,13 +2,10 @@ language: node_js
 node_js:
   - "stable"
 sudo: false
-env: REACT_VERSION=16.3.0
 matrix:
   include:
-    # testing the <15.4.0 >15.0.0 releases
-    - env: REACT_VERSION=<15.4.0 >15.0.0
-    # testing the ^15.4.x releases
-    - env: REACT_VERSION=^15.4.0
+    # testing the ^15.x releases
+    - env: REACT_VERSION=^15.x
     # testing the ^16.x releases
     - env: REACT_VERSION=^16.x
     # testing the latest release
