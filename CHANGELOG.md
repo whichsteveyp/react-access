@@ -6,6 +6,22 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased]
 
+## [1.1.0] - 2018-05-21
+### Changed
+- Moved away from `enzyme` in order to help simplify our tests and
+TravisCI test runner matrix
+- Dropped `lodash.intersection` in our default validator, which reall
+helped with the bundle size
+- Updated to Webpack 4 because reasons
+
+### Added
+- Tests now run with `jest` and `react-testing-library`
+
+### Fixed
+- I released this on the _public_ registry unlike 1.0.0, which was
+mistakenly only made available on my _work_ registry. Sorry!
+
+
 ## [1.0.0] - 2018-04-06
 There have been no changes from the `-alpha` releases, however
 those have been aggregated to this section for ease of reading.
