@@ -2,7 +2,9 @@
 React Context driven role-access for conditional rendering of components.
 
 <p align="center">
-  [![Travis build status](http://img.shields.io/travis/sprjr/react-access.svg?style=flat)](https://travis-ci.org/sprjr/react-access)
+  <a href="https://travis-ci.org/sprjr/react-access">
+    <img src="http://img.shields.io/travis/sprjr/react-access.svg?style=flat" alt="React Access Travis Builds" />
+  </a>
   <a href='https://coveralls.io/github/sprjr/react-access'>
     <img src='https://coveralls.io/repos/github/sprjr/react-access/badge.svg' alt='Coverage Status' />
   </a>
