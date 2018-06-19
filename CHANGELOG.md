@@ -6,6 +6,13 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased]
 
+## [1.1.1] - 2018-06-19
+### Changed
+- Moved away from `webpack` and aligned with `react-localize` for all
+the tooling / bundling / coverage stuff.
+- Fixed an issue where 1.1.0 was effectively unusable due to bundle
+issues.
+
 ## [1.1.0] - 2018-05-21
 ### Changed
 - Moved away from `enzyme` in order to help simplify our tests and
