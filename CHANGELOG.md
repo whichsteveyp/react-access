@@ -6,6 +6,9 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased]
 
+## [1.1.2] - 2018-06-28
+- Fixed `dist/` filenames to `react-access`, copypasta got me again!
+
 ## [1.1.1] - 2018-06-19
 ### Changed
 - Moved away from `webpack` and aligned with `react-localize` for all
