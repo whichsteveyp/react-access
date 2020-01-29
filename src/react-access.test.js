@@ -3,6 +3,15 @@ import {render} from 'react-testing-library';
 import 'jest-dom/extend-expect';
 import { RequireForAccess, ReactAccessProvider, useAccess } from './index';
 
+beforeEach(() => {
+  console._old = console.warn;
+  console.warn = jest.fn();
+});
+
+afterEach(() => {
+  console.warn = console._old;
+});
+
 test('renders children when authorizeAccess is true', () => {
   const {getByTestId} = render(<ReactAccessProvider validator={() => true}>
     <RequireForAccess>
@@ -63,7 +72,7 @@ test('useAccess hook', () => {
   const HookTester = ({ hook, handleResult }) => {
     return handleResult(hook());
   };
-
+  const isFunction = f => typeof f === 'function';
   const { validator } = ReactAccessProvider.defaultProps;
   const requiredPermissions = ['user', 'admin'];
   const userPermissions = ['admin'];
@@ -72,7 +81,8 @@ test('useAccess hook', () => {
       <HookTester
         hook={useAccess}
         handleResult={authorizeAccess => {
-          const authorized = authorizeAccess(requiredPermissions);
+          const authorized =
+            isFunction(authorizeAccess) && authorizeAccess(requiredPermissions);
           if (authorized) {
             return <div data-testid="secret">Secret Content</div>;
           }
