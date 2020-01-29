@@ -80,6 +80,15 @@ and determines if the contents should render.
   }}
 </ReactAccessConsumer>
 ```
+1. `useAccess` context hook.
+```js
+const Component = (props) => {
+  const hasAccess = useAccess();
+  return <div>
+    {hasAccess(props.userPermissions) && <SecretElement/>}
+  </div>;
+};
+```
 
 ### <ReactAccessProvider> Props
 | Name | Required | Description |

@@ -1,7 +1,7 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import {render} from 'react-testing-library';
 import 'jest-dom/extend-expect';
-import { RequireForAccess, ReactAccessProvider, ReactAccessConsumer } from './index';
+import { RequireForAccess, ReactAccessProvider, useAccess } from './index';
 
 test('renders children when authorizeAccess is true', () => {
   const {getByTestId} = render(<ReactAccessProvider validator={() => true}>
@@ -57,4 +57,38 @@ test('authorizeAccess calls the validator with the expected arguments', () => {
   expect(call[0]).toBe(userPermissions);
   expect(call[1]).toBe(requiredPermissions);
   expect(call[2]).toBe(true);
+});
+
+test('useAccess hook', () => {
+  const HookTester = ({ hook, handleResult }) => {
+    return handleResult(hook());
+  };
+
+  const { validator } = ReactAccessProvider.defaultProps;
+  const requiredPermissions = ['user', 'admin'];
+  const userPermissions = ['admin'];
+  const { queryByText } = render(
+    <ReactAccessProvider validator={validator} permissions={userPermissions}>
+      <HookTester
+        hook={useAccess}
+        handleResult={authorizeAccess => {
+          const authorized = authorizeAccess(requiredPermissions);
+          if (authorized) {
+            return <div data-testid="secret">Secret Content</div>;
+          }
+          return <div>Access Denied</div>;
+        }}
+      />
+    </ReactAccessProvider>
+  );
+
+  // expects the Secret Content if useContext is available otherwise expects a console.warn
+  if (!useContext) {
+    expect(console.warn).toBeCalledWith(
+      'This feature is only available in React >= 16.8'
+    );
+    return;
+  } else {
+    expect(queryByText('Secret Content')).not.toBeNull();
+  }
 });
