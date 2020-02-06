@@ -21,7 +21,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/sprjr/react-access.git"
+    "url": "git+https://github.com/stevey-p/react-access.git"
   },
   "keywords": [
     "react",
@@ -34,9 +34,9 @@
   "author": "Stephen Rivas Jr",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/sprjr/react-access/issues"
+    "url": "https://github.com/stevey-p/react-access/issues"
   },
-  "homepage": "https://github.com/sprjr/react-access#readme",
+  "homepage": "https://github.com/stevey-p/react-access#readme",
   "peerDependencies": {
     "prop-types": "15.x",
     "react": ">=0.14.9"

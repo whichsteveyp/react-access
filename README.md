@@ -2,11 +2,11 @@
 React Context driven role-access for conditional rendering of components.
 
 <p align="center">
-  <a href="https://travis-ci.org/sprjr/react-access">
-    <img src="http://img.shields.io/travis/sprjr/react-access.svg?style=flat" alt="React Access Travis Builds" />
+  <a href="https://travis-ci.org/stevey-p/react-access">
+    <img src="http://img.shields.io/travis/stevey-p/react-access.svg?style=flat" alt="React Access Travis Builds" />
   </a>
-  <a href='https://coveralls.io/github/sprjr/react-access'>
-    <img src='https://coveralls.io/repos/github/sprjr/react-access/badge.svg' alt='Coverage Status' />
+  <a href='https://coveralls.io/github/stevey-p/react-access'>
+    <img src='https://coveralls.io/repos/github/stevey-p/react-access/badge.svg' alt='Coverage Status' />
   </a>
 </p>
 
@@ -99,7 +99,7 @@ and determines if the contents should render.
 ## Contributors
 ([Emoji key](https://github.com/kentcdodds/all-contributors#emoji-key))
 
-| [<img src="https://avatars3.githubusercontent.com/u/682566?v=4" width="100px;"/><br /><sub>Stephen Rivas JR</sub>](http://twitter.com/stephenrivasjr)<br />[💻](https://github.com/sprjr/react-access/commits?author=sprjr "Code") [📖](https://github.com/sprjr/react-access/commits?author=sprjr "Documentation") [🤔](#ideas-sprjr "Ideas, Planning, & Feedback") | [<img src="https://avatars3.githubusercontent.com/u/1207250?v=4" width="100px;"/><br /><sub>Alan Souzati</sub>](http://www.alansouzati.com/)<br />[💻](https://github.com/sprjr/react-access/commits?author=alansouzati "Code") | [<img src="https://avatars3.githubusercontent.com/u/8263298?v=4" width="100px;"/><br /><sub>Connor Hastings</sub>](http://conor.rodeo/)<br />[💻](https://github.com/sprjr/react-access/commits?author=connorhastings "Code") [📖](https://github.com/sprjr/react-access/commits?author=connorhastings "Documentation") [⚠️](https://github.com/sprjr/react-access/commits?author=connorhastings "Tests") |
+(removed briefly as the display was broken and needs fixed)
 
 This project (mostly) follows the [all-contributors](https://github.com/kentcdodds/all-contributors)
 specification. Contributions of any kind are welcome!
