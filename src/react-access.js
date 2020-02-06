@@ -1,10 +1,20 @@
-import React, {Component} from 'react';
+import React, {Component, useContext} from 'react';
 import PropTypes from 'prop-types';
 import createReactContext from 'create-react-context';
 
 // by default, our value is always a function that returns
 // false for accessGranted
-const AccessContext = createReactContext(() => false);
+export const AccessContext = createReactContext(() => false);
+
+// hook to be used with useContext.
+export const useAccess = () => {
+  if (!useContext) {
+    console.warn('This feature is only available in React >= 16.8');
+    return {};
+  }
+
+  return useContext(AccessContext);
+};
 
 // This is provided for folks who want full-control of how
 // `authorizeAccess` is invoked, without RequireForAccess
