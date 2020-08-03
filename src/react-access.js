@@ -23,7 +23,7 @@ export const ReactAccessConsumer = AccessContext.Consumer;
 export class ReactAccessProvider extends Component {
   static propTypes = {
     children: PropTypes.node.isRequired,
-    permissions: PropTypes.arrayOf(PropTypes.string),
+    permissions: PropTypes.arrayOf(PropTypes.oneOfType([PropTypes.string, PropTypes.number])),
     validator: PropTypes.func,
   }
 
@@ -62,7 +62,7 @@ export class ReactAccessProvider extends Component {
 export class RequireForAccess extends Component {
   static propTypes = {
     children: PropTypes.node,
-    permissions: PropTypes.arrayOf(PropTypes.string),
+    permissions: PropTypes.arrayOf(PropTypes.oneOfType([PropTypes.string, PropTypes.number])),
     invalidAccessComponent: PropTypes.node,
     requireAll: PropTypes.bool,
   }

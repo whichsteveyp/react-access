@@ -49,6 +49,21 @@ test('defaultProps#validator behaves as expected', () => {
   // all requiredPermissions found
   expect(validator(['user', 'super-user', 'admin'], ['user', 'super-user', 'admin'], true)).toBe(true);
 });
+test('defaultProps#validator behaves as expected when permissions are numbers', () => {
+  const { validator } = ReactAccessProvider.defaultProps;
+
+  // no requiredPermissions found
+  expect(validator([1, 2], [3])).toBe(false);
+
+  // one requiredPermission found
+  expect(validator([1, 2], [1])).toBe(true);
+
+  // all requiredPermissions not found
+  expect(validator([1, 2], [1, 2, 3], true)).toBe(false);
+
+  // all requiredPermissions found
+  expect(validator([1, 2, 3], [1, 2, 3], true)).toBe(true);
+});
 
 test('authorizeAccess calls the validator with the expected arguments', () => {
   const stub = jest.fn();
